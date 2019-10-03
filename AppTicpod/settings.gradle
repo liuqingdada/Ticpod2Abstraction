@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':ticpod'
 
 include ':LibCommon'
 project(':LibCommon').projectDir = file('../LibCommon')

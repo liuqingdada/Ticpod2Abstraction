@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: "${rootDir}/android_project_common.gradle"
@@ -6,31 +6,34 @@ apply from: "${rootDir}/android_project_common.gradle"
 android {
     compileSdkVersion versions.compileSdk
     buildToolsVersion versions.buildTools
+
     defaultConfig {
-        applicationId "com.android.app.ticpod"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':LibCommon')
-    implementation project(':ticpod')
 
     implementation deps.kotlin.stdlib
     implementation deps.support.appcompat
     implementation deps.support.coreKtx
-    implementation deps.support.constraintLayout
+
+    implementation 'no.nordicsemi.android.support.v18:scanner:1.4.2'
+    implementation 'com.yanzhenjie.permission:x:2.0.1'
 
     testImplementation deps.test.junit
     testImplementation deps.test.runner

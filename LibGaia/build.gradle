@@ -1,0 +1,21 @@
+/**************************************************************************************************
+ * Copyright 2017 Qualcomm Technologies International, Ltd.                                       *
+ **************************************************************************************************/
+
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion 19
+    }
+}
+
+dependencies {
+    implementation project(':LibCommon')
+
+    implementation deps.support.compat
+    implementation deps.support.appcompat
+    implementation deps.support.annotations
+}

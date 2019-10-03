@@ -7,9 +7,10 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/../AppCommon" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../LibCommon" />
+            <option value="$PROJECT_DIR$/../LibGaia" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

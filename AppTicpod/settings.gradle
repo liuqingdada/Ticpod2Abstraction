@@ -1,4 +1,7 @@
 include ':app'
 
-include ':AppCommon'
-project(':AppCommon').projectDir = file('../AppCommon')
+include ':LibCommon'
+project(':LibCommon').projectDir = file('../LibCommon')
+
+include ':LibGaia'
+project(':LibGaia').projectDir = file('../LibGaia')

@@ -1,2 +1,4 @@
 include ':app'
-rootProject.name='AppTicpod'
+
+include ':AppCommon'
+project(':AppCommon').projectDir = file('../AppCommon')
